@@ -1,0 +1,13 @@
+package com.panaromafinance.member.repository;
+
+import java.util.List;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import com.panaromafinance.member.entity.Bank;
+
+@Repository
+public interface BankRepository extends JpaRepository<Bank, Long> {
+	
+	List<Bank> findByMemberId(Long memberId);
+
+}
